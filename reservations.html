@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation</title>
+    <meta name="viewport" content="width=device-widith, initial-scale=1.0">
+    <link rel="stylesheet" href="../Style/all_pages.css">
+    <script src="../Javascript/javapolices.js"></script>
+    
+    <script src="../Javascript/titrereservation.js"></script>
+</head>
+
+<body>
+        <div class="tete">
+                <h1 id='AuboutduMonde'>Au bout du monde...</h1>
+                    <p id='decouvrezvous'>Découvrez-vous.</p>
+                            
+            </div>
+          
+           
+         
+        
+            
+            <div class="navbar">
+                <a href="accueil.html">Accueil</a> 
+                <a href="destination.html">Déstinations</a>
+                <a href="panier.html">Panier</a>
+                <a href="mon_compte.html">Mon compte</a> 
+                                
+            </div>
+              
+            
+            <div id="titredest">
+                <h1 id='titrereservation'><center><u>Formulaire de réservation {{nom}}</u></center></h1></div>
+           
+            </div>
+          
+
+        <form id="form" action="recapitulatif.html" method="get">
+            <ul>
+                <li><label>Civilité</label>
+                    <select name='civilite' id='civilite'>
+                    <option value='Mr'>Mr</option>
+                    <option value='Mme'>Mme</option>
+                </select><label></li>
+            <li><label>Nom</label> <input required id='nom' name='nom'></li>
+                <li><label>Prenom</label> <input required id='prenom' name='prenom'></li>
+                <li><label>Adresse mail</label> <input type="email" name='mail' required id='email'></li>
+                <li><label>Téléphone</label> <input type="number" id='phone' name='phone'></li>
+                <li><label>Date de départ</label> <input type="date" value="2019-12-08" required id='datea' name='datea' onchange="calcul()"></li>
+                <li><label>Date de retour</label> <input type="date" value="2019-12-09" required id='dater' name='dater' onchange="calcul()"></li>
+                <li><label>Nombre d'adultes</label> <input type="number" min="1" max="20" value="1" required id='adultes' name='adultes' onchange="calcul()"/><label></li>
+            <li><label>Nombre d'enfants (-12 ans)</label><input type="number" min="0" max="20" value="0" required id='enfants' name='enfants' onchange="calcul()"/></li>
+                <li><label>Petit-déjeuner</label> <input type="checkbox" name="dej" id="oui" /></li>
+                <li><label>Renseignements</label></li>
+                <textarea id='renseignements' name='renseignements'></textarea>
+                <table style="border: 1px solid black;border-collapse: collapse;">
+                    <tr id="rowTotal">
+                        <td style="border-right: 1px solid black;padding:1em;padding-left:4em;padding-right:4em;">Total</td>
+                        <!-- <td style="border-right: 1px solid black;padding:1em;padding-left:4em;padding-right:4em;">{{nbAdulte}}*{{nbAdulte}}+{{nbAdulte}}*{{nbAdulte}}</td> -->
+                        <td id="total" name="total" value="{{total}}" style="padding:1em;padding-left:4em;padding-right:4em;">{{total}}</td>
+                    </tr>
+                </table>
+                <input type="hidden" id="destination" name="destination" value="" />
+                <input type="hidden" id="prixTotal" name="prixTotal" value="" />
+                <center><input type="submit" value="Réserver">&nbsp<input type="reset"></center>
+            </ul>
+
+        </form>
+       
+</body>
+<script src="../Javascript/reservation.js"></script>
+<footer>
+    <fieldset>
+        <a href="contact.html">Contact</a>
+        <a href="partenaires.html">Partenaires</a>
+        <a href="infos_légales.html">Infos légales</a>
+    </fieldset>
+</footer>
+
+</html>

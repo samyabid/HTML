@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-widith, initial-scale=1.0">
+    <title>Destinations</title>
+    <link rel="stylesheet" href="../Style/all_pages.css">
+    <script src="../Javascript/javapolices.js"></script>
+   
+  
+
+    
+</head>
+
+
+
+
+<body>
+    <div class="tete" >
+        <h1 id="AuboutduMonde">Au bout du monde...</h1>
+        <p id="decouvrezvous">Découvrez-vous.</p>
+        
+    </div>
+    <div class="navbar">
+            <div class="navbar">
+                <a href="accueil.html">Accueil</a> 
+                <a href="">Déstinations</a>
+                <a href="panier.html">Panier</a>
+                <a href="mon_compte.html">Mon compte</a>
+                
+            </div>
+    </div>
+    
+    <br>
+    <div class="header" id="myHeader">
+        
+       
+        <h3>Les destinations</h3>
+        <p>Choisissez l'une de ces déstinations et envolez-vous vers le bonheur !</p>
+    </div>
+    <select id="filtreDest" onchange=setText() style="display: block;margin-left: auto; margin-right: auto">
+        <option value="">--Choisissez une option--</option>
+        <option value="priceC">Prix croissant</option>
+        <option value="priceD">Prix decroissant</option>
+        <option value="animaux">Avec animaux</option>
+        <option value="ptitdej">Petit déjeuner inclus</option>
+    </select>
+
+    <template id="listeDestinations">
+        <div id="dest">
+            <p>
+              <a href="reservations.html">
+                  <div><b><FONT size="10px">{{nom}}: {{prix}} euros </FONT></b></div>
+              </a>
+            </p>
+          <p style="text-align: center">
+            <a href="reservations.html?id={{nom}}&prix={{prix}}">
+              <img src={{image}} alt ={{nom}} style="width:70%;display: block;margin-left: auto; margin-right: auto" > 
+            </a>
+          </p>
+            
+      </div>
+    </template>
+
+  
+    
+<button onclick="topFunction()" id="bouton" title="Go to top">Retourner en haut</button>
+</body>
+<script src="../Javascript/enhaut.js"></script>
+
+<script src="../Javascript/destinations.js"></script>
+
+<footer>
+    <fieldset>
+        <a href="contact.html">Contact</a>
+        <a href="partenaires.html">Partenaires</a>
+        <a href="infos_légales.html">Infos légales</a>
+    </fieldset>
+</footer>
+
+
+</html>
